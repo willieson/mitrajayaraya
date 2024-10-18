@@ -1,6 +1,12 @@
 @extends('layouts.layout')
 @section('content')
     <div class="container text-center">
+        @if (session('success'))
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                {{ session('success') }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        @endif
         <div class="row row-cols-1 row-cols-lg-4 g-2 g-lg-3">
             <!-- Kolom dengan lebar 12 pada layar kecil (sm), 6 pada layar medium (md), dan 4 pada layar besar (lg) -->
             <div class="col">

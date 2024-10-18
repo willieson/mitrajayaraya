@@ -30,10 +30,9 @@ Route::middleware(['guest'])->group(function () {
 });
 
 Route::middleware(['auth.jwt'])->group(function () {
-    Route::get('/', function () {
-        return view('home', [
-            "title" => "Home"
-        ]);
-    });
+    Route::get('/', [AuthController::class, 'index']);
     Route::post('logout', [AuthController::class, 'logout']);
+    Route::get('/verify-email', [AuthController::class, 'verifyEmail']);
+    Route::post('/send-verification-code', [AuthController::class, 'sendVerificationCode']);
+    Route::post('/verify-code', [AuthController::class, 'verifyCode']);
 });
