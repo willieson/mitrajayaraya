@@ -11,7 +11,7 @@
             <div class="col">Content 4</div>
         </div>
     </div>
-    <div class="container" data-aos="flip-up" data-aos-anchor-placement="center-bottom" data-aos-duration="3000">
+    <div class="container" data-aos="flip-up" data-aos-anchor-placement="bottom-bottom" data-aos-duration="3000">
         <h1>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum impedit tempore blanditiis aliquid, at debitis
             ad dolorum fugit quis beatae voluptate hic aut reprehenderit quibusdam, eius tenetur necessitatibus, officia
             officiis!</h1>
@@ -58,6 +58,15 @@
         });
     </script>
     <script>
-        AOS.init();
+        // Inisialisasi AOS dengan pengaturan
+        AOS.init({
+            disable: 'mobile', // Nonaktifkan AOS di perangkat mobile
+            startEvent: 'DOMContentLoaded', // Event untuk memulai AOS
+            initClassName: 'aos-init', // Kelas yang diterapkan setelah inisialisasi
+            animatedClassName: 'aos-animate', // Kelas yang diterapkan pada animasi
+            once: false, // Apakah animasi hanya terjadi sekali
+            duration: 3000, // Durasi animasi
+            anchorPlacement: 'bottom-bottom', // Penempatan anchor
+        });
     </script>
 @endsection

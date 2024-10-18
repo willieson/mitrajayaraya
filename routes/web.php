@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,13 +14,26 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home', [
-        "title" => "Home"
-    ]);
+Route::post('register', [AuthController::class, 'register']);
+Route::post('login', [AuthController::class, 'login']);
+
+
+Route::middleware(['guest'])->group(function () {
+    Route::get('/login', function () {
+        return view('login', [
+            "title" => "login"
+        ]);
+    });
+    Route::get('/register', function () {
+        return view('register', ['title' => 'Register']);
+    });
 });
-Route::get('/login', function () {
-    return view('login', [
-        "title" => "Login"
-    ]);
+
+Route::middleware(['auth.jwt'])->group(function () {
+    Route::get('/', function () {
+        return view('home', [
+            "title" => "Home"
+        ]);
+    });
+    Route::post('logout', [AuthController::class, 'logout']);
 });

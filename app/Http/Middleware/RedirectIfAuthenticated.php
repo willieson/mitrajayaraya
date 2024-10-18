@@ -25,6 +25,11 @@ class RedirectIfAuthenticated
             }
         }
 
+        // Cek apakah pengguna sudah login menggunakan JWT token di session
+        if ($request->session()->has('jwt_token')) {
+            return redirect('/'); // Redirect ke halaman home jika sudah login
+        }
+
         return $next($request);
     }
 }
