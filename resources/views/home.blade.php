@@ -1,68 +1,112 @@
 @extends('layouts.layout')
 @section('content')
-    <div class="container text-center">
+    <div class="container">
         @if (session('success'))
             <div class="alert alert-success alert-dismissible fade show" role="alert">
                 {{ session('success') }}
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
         @endif
-        <div class="row row-cols-1 row-cols-lg-4 g-2 g-lg-3">
+
+        <button onclick="addCart()">add cart</button>
+        <div class="row row-cols-1 row-cols-lg-4 g-4">
             <!-- Kolom dengan lebar 12 pada layar kecil (sm), 6 pada layar medium (md), dan 4 pada layar besar (lg) -->
             <div class="col">
-                <h1 id="test">Hello, jQuery Test!</h1>
+                <div class="card" style="width: 18rem;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                            card's content.</p>
+                        <div class="text-end"><a href="#" class="btn btn-primary"><i
+                                    class="fa-solid fa-cart-arrow-down"> Cart</i></a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col">Content 2</div>
-            <div class="col">Content 3</div>
-            <div class="col">Content 4</div>
-        </div>
-    </div>
-    <div class="container" data-aos="flip-up" data-aos-anchor-placement="bottom-bottom" data-aos-duration="3000">
-        <h1>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum impedit tempore blanditiis aliquid, at debitis
-            ad dolorum fugit quis beatae voluptate hic aut reprehenderit quibusdam, eius tenetur necessitatibus, officia
-            officiis!</h1>
-    </div>
-    <div class="container">
-        <h1>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum impedit tempore blanditiis aliquid, at debitis
-            ad dolorum fugit quis beatae voluptate hic aut reprehenderit quibusdam, eius tenetur necessitatibus, officia
-            officiis!</h1>
-    </div>
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                            card's content.</p>
+                        <a href="#" class="btn btn-primary"><i class="fa-solid fa-cart-arrow-down"> Cart</i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                            card's content.</p>
+                        <a href="#" class="btn btn-primary"><i class="fa-solid fa-cart-arrow-down"> Cart</i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                            card's content.</p>
+                        <a href="#" class="btn btn-primary"><i class="fa-solid fa-cart-arrow-down"> Cart</i></a>
+                    </div>
+                </div>
+            </div>
 
-    <div class="container">
-        <h1>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum impedit tempore blanditiis aliquid, at debitis
-            ad dolorum fugit quis beatae voluptate hic aut reprehenderit quibusdam, eius tenetur necessitatibus, officia
-            officiis!</h1>
-    </div>
-    <div class="container">
-        <h1>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum impedit tempore blanditiis aliquid, at debitis
-            ad dolorum fugit quis beatae voluptate hic aut reprehenderit quibusdam, eius tenetur necessitatibus, officia
-            officiis!</h1>
-    </div>
-    <div class="container" data-aos="fade-up">
-        <h1>FADE Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum impedit tempore blanditiis aliquid, at
-            debitis
-            ad dolorum fugit quis beatae voluptate hic aut reprehenderit quibusdam, eius tenetur necessitatibus, officia
-            officiis!</h1>
-    </div>
-    <div class="container">
-        <h1>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum impedit tempore blanditiis aliquid, at debitis
-            ad dolorum fugit quis beatae voluptate hic aut reprehenderit quibusdam, eius tenetur necessitatibus, officia
-            officiis!</h1>
-    </div>
-    <div class="container">
-        <h1>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum impedit tempore blanditiis aliquid, at debitis
-            ad dolorum fugit quis beatae voluptate hic aut reprehenderit quibusdam, eius tenetur necessitatibus, officia
-            officiis!</h1>
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                            card's content.</p>
+                        <a href="#" class="btn btn-primary"><i class="fa-solid fa-cart-arrow-down"> Cart</i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                            card's content.</p>
+                        <a href="#" class="btn btn-primary"><i class="fa-solid fa-cart-arrow-down"> Cart</i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                            card's content.</p>
+                        <a href="#" class="btn btn-primary"><i class="fa-solid fa-cart-arrow-down"> Cart</i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                            card's content.</p>
+                        <a href="#" class="btn btn-primary"><i class="fa-solid fa-cart-arrow-down"> Cart</i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 @endsection
 
 @section('jquery')
-    <script>
-        $(document).ready(function() {
-            // Mengubah teks ketika halaman dimuat
-            $('#test').text('jQuery is Working!');
-        });
-    </script>
     <script>
         // Inisialisasi AOS dengan pengaturan
         AOS.init({
@@ -74,5 +118,16 @@
             duration: 3000, // Durasi animasi
             anchorPlacement: 'bottom-bottom', // Penempatan anchor
         });
+
+        function addCart() {
+            var asking = confirm("Add this product to cart?");
+            var numberCart = document.getElementById('count-cart').innerText;
+            if (asking) {
+
+                numberCart++;
+                document.getElementById('count-cart').innerHTML = numberCart;
+            }
+
+        }
     </script>
 @endsection

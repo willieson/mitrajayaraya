@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\HistoryController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -35,4 +36,5 @@ Route::middleware(['auth.jwt'])->group(function () {
     Route::get('/verify-email', [AuthController::class, 'verifyEmail']);
     Route::post('/send-verification-code', [AuthController::class, 'sendVerificationCode']);
     Route::post('/verify-code', [AuthController::class, 'verifyCode']);
+    Route::get('/history-order', [HistoryController::class, 'index']);
 });
