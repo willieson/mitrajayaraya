@@ -61,7 +61,7 @@ class AuthController extends Controller
             return redirect('/verify-email')->with('error', 'Please verify your email first.');
         }
 
-        return redirect('/');
+        return redirect('/admin');
     }
 
 

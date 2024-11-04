@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>TokoSoul - {{ $title }}</title>
+    <title>Mitra Jaya Raya - {{ $title }}</title>
     <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="/assets/fontawesome/css/fontawesome.css" rel="stylesheet" />
@@ -41,9 +41,9 @@
 
 <body>
 
-    <!-- Floating Cart -->
+    {{-- <!-- Floating Cart -->
     <div class="floating"><span style="vertical-align: super;color:red;" id="count-cart">0</span><i
-            class="fa-solid fa-cart-arrow-down"></i></div>
+            class="fa-solid fa-cart-arrow-down"></i></div> --}}
 
     <!-- Header / Navbar -->
     @include('components.nav-bar')
